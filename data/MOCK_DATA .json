@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "first_name": "Lorain",
+    "last_name": "McQueen",
+    "phone": "384-839-8384",
+    "age": 53
+  },
+  {
+    "id": 2,
+    "first_name": "Glyn",
+    "last_name": "Beushaw",
+    "phone": "917-201-4042",
+    "age": 38
+  },
+  {
+    "id": 3,
+    "first_name": "Wanids",
+    "last_name": "Minifie",
+    "phone": "254-427-1772",
+    "age": 24
+  },
+  {
+    "id": 4,
+    "first_name": "Willy",
+    "last_name": "Ciepluch",
+    "phone": "826-830-9505",
+    "age": 37
+  },
+  {
+    "id": 5,
+    "first_name": "Deeann",
+    "last_name": "Sambiedge",
+    "phone": "584-351-5742",
+    "age": 38
+  },
+  {
+    "id": 6,
+    "first_name": "Ofilia",
+    "last_name": "Breslau",
+    "phone": "731-310-7055",
+    "age": 69
+  },
+  {
+    "id": 7,
+    "first_name": "Bettye",
+    "last_name": "Greenig",
+    "phone": "400-566-0442",
+    "age": 29
+  },
+  {
+    "id": 8,
+    "first_name": "Otes",
+    "last_name": "Scrimgeour",
+    "phone": "259-486-9737",
+    "age": 60
+  },
+  {
+    "id": 9,
+    "first_name": "Bayard",
+    "last_name": "Haselup",
+    "phone": "879-453-9934",
+    "age": 34
+  },
+  {
+    "id": 10,
+    "first_name": "Hartley",
+    "last_name": "McKennan",
+    "phone": "422-342-4897",
+    "age": 62
+  }
+]
