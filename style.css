@@ -8,3 +8,6 @@ body{
     max-width: 900px;
     margin:auto;
 }
+.customer--list-item{
+    text-align: center;
+}
