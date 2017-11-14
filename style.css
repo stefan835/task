@@ -1,13 +1,21 @@
 body{
     background-color: #0e0e0e;
-    color:#fefefe;
 }
 .customers--list{
-    border: 2px #fefefe solid;
-    width: 100%;
-    max-width: 900px;
-    margin:auto;
+    margin: 100px auto 0 auto;
+    color: #0367B4;
+    background-color: white;
+    border: 2px #e6e6e6 solid;
+    border-spacing: 0;
+}
+.customers--list thead tr {
+    background-color: #e6e6e6;
+    text-align: center;
 }
 .customer--list-item{
     text-align: center;
+    border-bottom:1px #e6e6e6 solid ;
+}
+tr:nth-child(odd){
+    background-color: #e3f2fd;
 }
