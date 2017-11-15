@@ -2,13 +2,17 @@ fetch('public/data/MOCK_DATA.json')
   .then(response => response.json()
   )
   .then(data => {
-    data.map(customer=>{
+    data.map(customer => {
       $('.customers--list tbody').append($('<tr>').addClass('customer--list-row')
-        .append($('<td>').addClass('customer--list-item').text(customer.id))
+        .attr('data-id', customer.id)
         .append($('<td>').addClass('customer--list-item').text(`${customer.first_name} ${customer.last_name}`))
         .append($('<td>').addClass('customer--list-item').text(customer.phone))
-        .append($('<td>').addClass('customer--list-item').text(customer.age)
-        ))
+        .append($('<td>').addClass('customer--list-item').text(customer.age))
+      )
+        .append($('<tr>').addClass('customer--details customer--list-row')
+          .append($('<span>').addClass('customer--list-item').text(`Nr telefonu: ${customer.phone}`))
+          .append($('<span>').addClass('customer--list-item').text(`Wiek: ${customer.age}`))
+        )
     });
   })
   .catch(err => {
