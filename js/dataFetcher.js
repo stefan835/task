@@ -3,6 +3,7 @@ fetch('public/data/MOCK_DATA.json')
   )
   .then(data => {
     data.map(customer => {
+      // Building table
       $('.customers--list tbody').append($('<tr>').addClass('customer--list-row')
         .attr('data-id', customer.id)
         .append($('<td>').addClass('customer--list-item').text(`${customer.first_name} ${customer.last_name}`)
@@ -11,9 +12,21 @@ fetch('public/data/MOCK_DATA.json')
         .append($('<td>').addClass('customer--list-item').text(customer.age))
       )
         .append($('<tr>').addClass('customer--details')
-          .append($('<span>').addClass('customer--list-item').text(`Nr telefonu: ${customer.phone}`))
-          .append($('<span>').addClass('customer--list-item').text(`Wiek: ${customer.age}`))
+          .append($('<span>')
+            .append($('<span>').addClass(' label').text(`Nr telefonu:`))
+            .append($('<span>').addClass('customer--list-item ').text(customer.phone))
+          )
+          .append($('<span>')
+            .append($('<span>').addClass(' label').text(`Wiek:`))
+            .append($('<span>').addClass('customer--list-item ').text(customer.age))
+          )
         )
+    });
+    // Events
+    $('.arrow-icon').click(function () {
+      $(this).toggleClass('arrow-icon__active');
+      const targetId = $(this).parent().parent().attr('data-id') - 1;
+      $('.customer--details').eq(targetId).toggleClass('collapsed');
     });
   })
   .catch(err => {
