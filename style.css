@@ -17,8 +17,11 @@
 }
 
 .customer--list-item {
-    text-align: center;
     height: 40px;
+    position: relative;
+    text-align: left;
+    padding: 0 10%;
+    box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.2);
 }
 
 tr:nth-child(4n) {
@@ -37,11 +40,41 @@ td:nth-child(n+2) {
     display: none;
 }
 
+.customer--details span {
+    box-shadow: none;
+}
+
 .customer--details {
-    height: 60px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    display: none;
+}
+
+.arrow-icon {
+    height: 25px;
+    width: 25px;
+    background: url('img/arrow-icon.svg');
+    cursor: pointer;
+    position: absolute;
+    right: 10%;
+    top: 5px;
+    animation: arrow-rotate-back 300ms forwards;
+}
+
+@keyframes arrow-rotate {
+    0% {
+        transform: rotateZ(180deg);
+    }
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
+
+@keyframes arrow-rotate-back {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(180deg);
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -50,7 +83,9 @@ td:nth-child(n+2) {
     }
 
     .customer--list-item {
-        border-bottom: 1px #e6e6e6 solid;
+        box-shadow: none;
+        padding: 0;
+        text-align: center;
     }
 
     th:nth-child(n+2), td:nth-child(n+2) {
@@ -67,5 +102,9 @@ td:nth-child(n+2) {
 
     .customer--list-row:nth-child(4n-1) {
         background-color: #fff;
+    }
+
+    .arrow-icon {
+        display: none;
     }
 }
