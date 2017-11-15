@@ -9,13 +9,13 @@ fetch('public/data/MOCK_DATA.json')
         .append($('<td>').addClass('customer--list-item').text(customer.phone))
         .append($('<td>').addClass('customer--list-item').text(customer.age))
       )
-        .append($('<tr>').addClass('customer--details customer--list-row')
+        .append($('<tr>').addClass('customer--details')
           .append($('<span>').addClass('customer--list-item').text(`Nr telefonu: ${customer.phone}`))
           .append($('<span>').addClass('customer--list-item').text(`Wiek: ${customer.age}`))
         )
     });
   })
   .catch(err => {
-    $('.customers--list tbody').text('Wystąpił problem z ładowaniem danych. Spróbuj ponownie.');
+    $('.customers--list thead').text('Wystąpił problem z ładowaniem danych. Spróbuj ponownie.');
     console.log(err)
   });

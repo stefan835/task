@@ -7,6 +7,7 @@
     cursor: default;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-family: 'Basic', sans-serif;
+    text-align: center;
 }
 
 .customers--list thead tr {
@@ -52,11 +53,7 @@ td:nth-child(n+2) {
         border-bottom: 1px #e6e6e6 solid;
     }
 
-    th:nth-child(n+2) {
-        display: table-cell;
-    }
-
-    td:nth-child(n+2) {
+    th:nth-child(n+2), td:nth-child(n+2) {
         display: table-cell;
     }
 
