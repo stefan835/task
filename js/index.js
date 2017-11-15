@@ -24,6 +24,12 @@ fetch('public/data/MOCK_DATA.json')
               )
             )
         });
+        //Adding new event after sorting
+        $('.arrow-icon').click(function () {
+          $(this).toggleClass('arrow-icon__active');
+          const targetId = $(this).parent().parent().attr('data-id');
+          $('[data-id=' + targetId + ']').next().toggleClass('collapsed')
+        });
       };
       drawTable(data);
 
@@ -64,13 +70,6 @@ fetch('public/data/MOCK_DATA.json')
       };
 
       // Events
-      $('.arrow-icon').click(function () {
-        $(this).toggleClass('arrow-icon__active');
-        const targetId = $(this).parent().parent().attr('data-id') - 1;
-        console.log(targetId);
-        $('.customer--details').eq(targetId).toggleClass('collapsed');
-      });
-
       $('.sort-age').click(function () {
         sortByNumber($(this), 'age')
       });
