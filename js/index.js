@@ -10,6 +10,8 @@ fetch('public/data/MOCK_DATA.json')
             .attr('data-id', customer.id)
             .append($('<td>').addClass('customer--list-item').text(`${customer.first_name} ${customer.last_name}`)
               .append($('<span>').addClass('arrow-icon')))
+            .append($('<td>').addClass('customer--list-item').text(customer.first_name))
+            .append($('<td>').addClass('customer--list-item').text(customer.last_name))
             .append($('<td>').addClass('customer--list-item').text(customer.phone))
             .append($('<td>').addClass('customer--list-item').text(customer.age))
           )
@@ -76,6 +78,9 @@ fetch('public/data/MOCK_DATA.json')
 
       $('.sort-name').click(function () {
         sortByString($(this), 'first_name')
+      });
+      $('.sort-last-name').click(function () {
+        sortByString($(this), 'last_name')
       })
     }
   )

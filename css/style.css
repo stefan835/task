@@ -13,7 +13,7 @@
 .sort-icon {
     margin: 0 0 2px 0;
     height: 16px;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .customers--list thead tr {
@@ -26,7 +26,7 @@
     height: 40px;
     position: relative;
     text-align: left;
-    padding: 0 15%;
+    padding: 0 20%;
     box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.2);
 }
 
@@ -79,7 +79,7 @@ td:nth-child(n+2) {
     background: url('../img/arrow-icon.svg');
     cursor: pointer;
     position: absolute;
-    right: 10%;
+    right: 15%;
     top: 5px;
     animation: arrow-rotate-back 300ms forwards;
 }
@@ -118,6 +118,14 @@ td:nth-child(n+2) {
 @media screen and (min-width: 768px) {
     .customers--list {
         font-size: 18px;
+    }
+
+    th:nth-child(n+1) {
+        display: none;
+    }
+
+    td:nth-child(n+1) {
+        display: none;
     }
 
     .customer--list-item {
